@@ -1,0 +1,19 @@
+<div class="card-body contacts_body">
+  <ul class="contacts">
+    <ng-container *ngFor="let user of users">
+        <ng-container *ngIf="user.id !== me.id">
+          <li class="active">
+            <div class="d-flex bd-highlight">
+              <div class="img_cont">
+                <img src="{{ user.avatar }}" class="rounded-circle user_img">
+              </div>
+              <div class="user_info">
+                <span>{{ user.userName }}</span>
+                <p *ngIf="user.typing" class="user_typing">Is typing ...</p>
+              </div>
+            </div>
+          </li>
+        </ng-container>
+      </ng-container>
+  </ul>
+</div>

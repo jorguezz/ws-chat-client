@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+$blue: #2b83bb;
+
+body,html{
+  height: 100%;
+  margin: 0;
+}
+
+.card-footer{
+  background: $blue;
+  border-radius: 0 0 15px 15px ;
+  border-top: 0 ;
+}
+
+.card-header{
+  background: $blue;
+  border-radius: 15px 15px 0 0 ;
+  border-bottom: 0 ;
+}
+
+.card-header:last-child {
+  border-radius: 15px 15px 0 0;
+}
+
+.card-footer:last-child{
+  border-radius: 0 0 15px 15px;
+}

@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+
+.msg_card_body{
+  overflow-y: auto;
+  height: 400px;
+}
+
+.img_cont_msg{
+  height: 40px;
+  width: 40px;
+}
+
+.user_img_msg{
+  height: 40px;
+  width: 40px;
+  border:1.5px solid #f5f6fa;
+}
+
+.msg_container{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px;
+  position: relative;
+  max-width: 400px;
+
+  .msg_username {
+    text-decoration: underline;
+    font-weight: bold;
+    color: black;
+    margin: 0px;
+  }
+  .msg_content {
+    margin: 10px 0px;
+  }
+  .msg_time{
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    color: black;
+    font-size: .5em;
+    margin: 0px;
+  }
+}

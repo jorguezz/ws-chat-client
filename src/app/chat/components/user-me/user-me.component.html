@@ -1,0 +1,9 @@
+<div class="card-header">
+  <span class="img_cont_msg">
+    <img src="{{ me?.avatar }}" class="rounded-circle user_img_msg">
+  </span>
+  <span class="header-username"> {{ me?.userName }} </span>
+  <span (click)="editUsername.emit($event)" class="edit-username">
+    <i class="fas fa-edit"></i>
+  </span>
+</div>
