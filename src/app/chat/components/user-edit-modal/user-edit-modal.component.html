@@ -1,0 +1,25 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Edit your username</h4>
+  <button type="button" class="close" aria-label="Close" (click)="close()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class="form-group">
+      <label for="username">Username: {{ currentUser?.userName || 'Anonymous' }}</label>
+      <div class="input-group">
+        <input id="userName"
+          name="message"
+          [formControl]="userNameInput"
+          class="form-control"
+          placeholder="Change your username"
+          (keyup.enter)="save($event)"
+          autofocus>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="save($event)">Save</button>
+</div>

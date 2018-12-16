@@ -1,0 +1,12 @@
+  <div #chat class="card-body msg_card_body">
+    <div *ngFor="let message of messages" class="d-flex justify-content-start mb-4">
+      <div class="img_cont_msg">
+        <img src="{{ message.userAvatar }}" class="rounded-circle user_img_msg">
+      </div>
+      <div class="msg_container">
+        <p class="msg_username"> {{ message.userName }}</p>
+        <p class="msg_content">{{ message.message }}</p>
+        <p class="msg_time">{{ message.createdAt | date: 'shortTime' }}</p>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,32 @@
+<div class="container-fluid h-100">
+    <div class="row justify-content-center h-100">
+
+      <div class="col-md-4 col-xl-3 chat">
+        <div class="card mb-sm-3 mb-md-0 users_card">
+
+        <app-user-me (editUsername)="editUsername($event)" [me]="me"></app-user-me>
+
+        <app-user-list [users]="users" [me]="me"></app-user-list>
+
+        <div class="card-footer"></div>
+
+      </div>
+    </div>
+
+    <!-- CHAT APP -->
+    <div class="col-md-8 col-xl-6 chat">
+        <div class="card">
+
+          <app-message-list
+            [messages]="messages">
+          </app-message-list>
+
+          <app-input-message
+            (sendMessage)="sendMessage($event, message)">
+          </app-input-message>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
