@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import { throttleTime } from 'rxjs/operators';
@@ -9,7 +9,7 @@ import { ChatService } from '../../services/chat.service';
   templateUrl: './app-input-message.component.html',
   styleUrls: ['./app-input-message.component.scss']
 })
-export class AppInputMessageComponent implements OnInit {
+export class AppInputMessageComponent implements OnInit, OnDestroy {
   @Output() sendMessage = new EventEmitter<any>();
 
   messageInput;
@@ -37,6 +37,10 @@ export class AppInputMessageComponent implements OnInit {
       this.chatService.sendStopTyping();
       this.messageInput.setValue('');
     }
+  }
+
+  ngOnDestroy() {
+    this.messageInputSub.unsubscribe();
   }
 
 }
